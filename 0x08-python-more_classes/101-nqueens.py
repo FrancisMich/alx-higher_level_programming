@@ -75,4 +75,4 @@ def mark_positions(board, row, col):
         if c < 0:
             break
         board[r][c] = "x"
-      c -=
+      c -= 1
