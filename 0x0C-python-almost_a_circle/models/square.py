@@ -46,7 +46,7 @@ class Square(Rectangle):
                         self.id = arg
                 elif a == 1:
                     self.size = arg
-                    elif a == 2:
+                elif a == 2:
                     self.x = arg
                 elif a == 3:
                     self.y = arg
@@ -73,7 +73,7 @@ class Square(Rectangle):
             "size": self.width,
             "x": self.x,
             "y": self.y
-          }
+        }
 
     def __str__(self):
         """Return the print() and str() representation of a Square."""

@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Defines a base model class."""
 import json
 import csv
@@ -7,10 +6,10 @@ import turtle
 
 
 class Base:
-    """Base model.
-    This Represents the "base" for all other classes in project 0x0C-python-almost_a_circle*.
-    Private Class Attributes:
-        __nb_object (int): Number of instantiated Bases.
+    """Represent the base model.
+    Represents the "base" for all other classes in project 0x0C*.
+    Attributes:
+        __nb_objects (int): The number of instantiated Bases.
     """
 
     __nb_objects = 0
@@ -117,7 +116,7 @@ class Base:
         """Return a list of classes instantiated from a CSV file.
         Reads from `<cls.__name__>.csv`.
         Returns:
-        If the file does not exist - an empty list.
+            If the file does not exist - an empty list.
             Otherwise - a list of instantiated classes.
         """
         filename = cls.__name__ + ".csv"
