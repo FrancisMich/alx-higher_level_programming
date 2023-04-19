@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# test_square.py
-# Brennan D Baraban <375@holbertonschool.com>
 """Defines unittests for models/square.py.
 Unittest classes:
     TestSquare_instantiation - line 24
@@ -160,6 +158,7 @@ class TestSquare_size(unittest.TestCase):
     def test_zero_size(self):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(0, 2)
+
 
 class TestSquare_x(unittest.TestCase):
     """Unittests for testing initialization of Square x attribute."""
@@ -348,7 +347,7 @@ class TestSquare_stdout(unittest.TestCase):
             sq (Square): The Square ot print to stdout.
             method (str): The method to run on sq.
         Returns:
-        The text printed to stdout by calling method on sq.
+            The text printed to stdout by calling method on sq.
         """
         capture = io.StringIO()
         sys.stdout = capture
@@ -402,7 +401,7 @@ class TestSquare_stdout(unittest.TestCase):
         capture = TestSquare_stdout.capture_stdout(s, "display")
         self.assertEqual(" ###\n ###\n ###\n", capture.getvalue())
 
-        def test_display_size_y(self):
+    def test_display_size_y(self):
         s = Square(4, 0, 1, 9)
         capture = TestSquare_stdout.capture_stdout(s, "display")
         display = "\n####\n####\n####\n####\n"
@@ -618,7 +617,7 @@ class TestSquare_update_kwargs(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s.update(y=-5)
 
-     def test_update_args_and_kwargs(self):
+    def test_update_args_and_kwargs(self):
         s = Square(10, 10, 10, 10)
         s.update(89, 2, y=6)
         self.assertEqual("[Square] (89) 10/10 - 2", str(s))
